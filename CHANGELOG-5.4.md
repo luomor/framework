@@ -1,5 +1,60 @@
 # Release Notes for 5.4.x
 
+## v5.4.36 (2017-08-30)
+
+### Added
+- Added MP3 to `Testing/MimeType::$mimes` ([#20745](https://github.com/laravel/framework/pull/20745))
+
+### Changed
+- Mailables that defined a `$delay` property will honor it ([#20717](https://github.com/laravel/framework/pull/20717))
+
+### Fixed
+- Fixed route URLs building from artisan commands ([#20788](https://github.com/laravel/framework/pull/20788))
+
+
+## v5.4.35 (2017-08-24)
+
+### Fixed
+- Fixed breaking change in `FactoryBuilder` ([#20727](https://github.com/laravel/framework/pull/20727))
+
+
+## v5.4.34 (2017-08-23)
+
+### Added
+- Added `Str::start()` and `str_start()` helper ([#20569](https://github.com/laravel/framework/pull/20569))
+- Added `orDoesntHave()` and `orWhereDoesntHave()` to `QueriesRelationships` ([#20685](https://github.com/laravel/framework/pull/20685))
+- Added support for callables in model factory attributes ([#20692](https://github.com/laravel/framework/pull/20692))
+
+### Changed
+- Return the model instance from `Model::refresh()` ([#20657](https://github.com/laravel/framework/pull/20657))
+- Use `self::$verbs` in `Router::any()` ([#20698](https://github.com/laravel/framework/pull/20698))
+
+### Fixed
+- Fixed duplicate user model import in `make:policy` ([#20645](https://github.com/laravel/framework/pull/20645), [48f5f23](https://github.com/laravel/framework/commit/48f5f23fd8615f48f2aee27a301c1f2f1505bdfb))
+- Fixed PHP 7.2 incompatibility in `Builder::mergeWheres()` ([#20635](https://github.com/laravel/framework/pull/20635))
+- Fixed issue in `RateLimiter` ([#20684](https://github.com/laravel/framework/pull/20684))
+- Fixed success message after password reset ([#20707](https://github.com/laravel/framework/pull/20707))
+- Fail job only if it didn't fail already ([#20654](https://github.com/laravel/framework/pull/20654))
+
+
+## v5.4.33 (2017-08-14)
+
+### Added
+- Show error message if a reverted migration is not found ([#20499](https://github.com/laravel/framework/pull/20499), [a895b1e](https://github.com/laravel/framework/commit/a895b1eb0e50683c4583c24bb17b3f8d9e8127ab))
+
+### Changed
+- Moved `tap()` method from `Builder` to `BuildsQueries` ([#20384](https://github.com/laravel/framework/pull/20384))
+- Made Blade `or` operator case-insensitive ([#20425](https://github.com/laravel/framework/pull/20425))
+- Support `$amount = 0` in `Arr::random()` ([#20439](https://github.com/laravel/framework/pull/20439))
+- Reverted `doctrine/inflector` version change made in v5.4.31 ([#20227](https://github.com/laravel/framework/pull/20227))
+
+### Fixed
+- Fixed bug when using empty values in `SQLiteGrammar::compileInsert()` ([#20424](https://github.com/laravel/framework/pull/20424))
+- Fixed `$boolean` parameter being ignored in `Builder::addArrayOfWheres()` ([#20553](https://github.com/laravel/framework/pull/20553))
+- Fixed `JoinClause::whereIn()` when using a subquery ([#20453](https://github.com/laravel/framework/pull/20453))
+- Reset day parameter when using `Y-m` with `date_format` rule ([#20566](https://github.com/laravel/framework/pull/20566))
+
+
 ## v5.4.32 (2017-08-03)
 
 ### Added
